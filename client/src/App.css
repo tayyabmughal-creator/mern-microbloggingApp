@@ -1,0 +1,761 @@
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Spline Sans Mono', monospace;
+    /* border: 2px solid red ; */
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background-color: #001f3f;
+    color: white;
+    /* border: 2px solid yellow ; */
+}
+#root {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    /* border: 2px solid blue; */
+}
+/*------------------------- N A V B A R ------------------------------------*/
+
+.nav {
+    margin-top: 5vh;
+}
+.nav ul {
+    /* border: 2px solid gold; */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+.nav a {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    /* border: 1px solid rgb(111, 252, 111); */
+}
+/* highlight on press but link is not kept highlighted */
+.nav a:active {
+    color: red;
+}
+/* keep highlight current link in nav */
+.nav .active {
+    color: red;
+}
+/*hide checkbox*/
+.side-menu {
+    display: none;
+}
+/*here logo repeats itself*/
+/* .logo img {
+    background-image: url(./component/quotesfarm.png)
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 1px solid lemonchiffon;
+    width: 2em; 
+    height: auto; 
+    display: block; 
+    text-indent: -9999px;
+}
+.logo{ border: 1px solid lime;
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+} */
+
+/*--------------------- ALL --simple-btn Class ------------------------------------*/
+
+.simple-btn:hover {
+    background-color: #FF3131;
+    color: white;
+}
+.logout-btn {
+    background-color: transparent;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.95em;
+}
+.logout-btn:hover {
+    background-color: #FF3131;
+    color: white;
+}
+
+
+/*---------------------------ALL Submit-btn class---------------------------*/
+
+.submit-btn {
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 3px;
+    transition: all 0.1s;
+    cursor: pointer;
+    margin: 6px;
+    background-color: red;
+    color: white;
+}
+.submit-btn:hover {
+    background-color: #49fb35;
+    color: green;
+}
+.submit-btn span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s;
+}
+.submit-btn span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.1s;
+}
+.submit-btn:hover span {
+    padding-right: 25px;
+}
+.submit-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*----------------------------- F E E D ---------------------------------------------*/
+
+/* #home-div {
+    border: 1px solid red;
+} */
+#home-div h1 {
+    margin-top: 19%;
+    text-align: center;
+}
+.login-feed {
+    color: blueviolet;
+    text-decoration:underline;
+}
+
+@keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(16deg);
+    }
+    20% {
+      transform: rotate(-6deg);
+    }
+    30% {
+      transform: rotate(16deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(16deg);
+    }
+    60% {
+      transform: rotate(-6deg);
+    }
+    70% {
+        transform: rotate(16deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .waving-hand {
+    animation: wave 2.1s 0.6s infinite;
+    transform-origin: 75% 75%;
+    display: inline-block;
+  }
+
+/*--------------------- N E W S L E T T E R -----------------------------------------*/
+
+#nl-div {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    padding-left: 4.3em;
+    padding-top: 2em;
+    padding-right: 2em;
+}
+
+#nl-form {
+    /*#nl-form form{..} wont work, id of form itself is nl-form */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+#nl-form input {
+    width: 60vw;
+    text-align: center;
+}
+
+/*---------------------  S I G N -- U P  ----------------------------------*/
+
+#signup-div {
+    /* border: 1px solid red; */
+    display: grid;
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-content: center;
+    justify-items: center;
+}
+#signup-form-div {
+    /* border: 2px solid green; */
+    margin-top: 50px;
+}
+#signup-form {
+    /* border: 1px solid gold; */
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 3px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    margin-top: 75px;
+}
+#signup-form input {
+    width: fit-content;
+    height: 5vh;
+    text-align: center;
+}
+#signup-div button{
+    margin-top: 20px;
+}
+
+/*--------------------- P R O F I L E ----------------------------------*/
+
+
+#react-login-div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#login-main-div {
+    width: 75%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2em;
+}
+#login-form-div {
+    grid-row: 2/6;
+    grid-column: 1/-1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#login-form {
+    display: grid;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+#login-form input {
+    text-align: center;
+}
+#login-form-div h1 {
+    padding-left: 20px;
+}
+#login-button1-div {
+    display: grid;
+    grid-row: 6/-1;
+    grid-column: 3/4;
+    margin-top: 20%;
+    margin-right: -90%;
+    padding-left: 35%;
+    align-content: center;
+    justify-content: center;
+}
+
+
+/*--------------------- S E A R C H -- B O X ---------------------------------------*/
+
+/* took reference from - https://codepen.io/ahmadbassamemran/pen/rNjMXqg */
+
+#searchbox-div {
+    /* border: 1px solid red; */
+    padding-top: 0.5em;
+    margin-top: 1em;
+    position: relative;
+    left: 45%;
+    width: 14vw;
+}
+.searchbar-div{
+    /* border: 1px solid red; */
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search{
+    height: 30px;
+    width: 30px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    padding-right: 40px;
+    color:#fff;
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 50;
+  }
+  .btn-search{
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    font-size: 23px;
+    /* font-weight: bold; */
+    /* outline: none; */
+    cursor: pointer;
+    /* border-radius: 20%; */
+    padding-right: 35px;
+    position: absolute;
+    right: 0px;
+    /* color:#ffffff ; */
+    background-color: #e7e7e7;
+    pointer-events: painted;
+  }
+  .btn-search:focus ~ .input-search{
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+/*  search bar status message AND search result list- */
+#search-status-div {
+    border-left: 3px solid rgb(167, 6, 6);
+    background-color: lightgrey;
+    color: black;
+    width: 24vw;
+    margin-top: 3px;
+}
+#search-status-div:hover {
+    color: antiquewhite;
+    background-color: rgb(170, 31, 31);
+}
+
+#search-list-div {
+    /* border: 2px solid #0475e6; */
+    border-left: 6px solid rgb(170, 31, 31);
+    background-color: lightgrey;
+    color: green;
+    width: fit-content;
+}
+#search-list-div p {
+    color: white;
+    /* background-color: #FF3131; */
+    width: fit-content;
+    padding: 5px 5px 0 15px;
+    text-decoration: none;
+}
+#search-list-div p:hover {
+    color: antiquewhite;
+    background-color: whitesmoke ;
+}
+/*----------------------- M A P   D A T A -------------------------*/
+
+.mapdata-my p {
+    /* border: 1px solid limegreen; */
+    width: fit-content;
+
+}
+.mapdata-my div {
+    display: grid;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+    box-shadow: 1px 1px 5px 1px lime;
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid gold;
+    justify-content: left;
+    justify-items: left;
+}
+
+.mapdata-userprofile , .mapdata-my {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.mapdata-userprofile p {
+    /* border: 1px solid limegreen; */
+    width: fit-content;
+
+}
+.mapdata-userprofile div {
+    display: grid;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+    box-shadow: 1px 1px 5px 1px red;
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid gold;
+    justify-content: left;
+    justify-items: left;
+}
+
+
+
+
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||||||  F O R   --   M O B I L E      |||||||||||||||||
+   ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+@media only screen and (max-width: 600px){
+
+    body {background-color: #001f3f;}
+
+
+    .logout-btn {
+        background-color: transparent;
+        border: none;
+        color: white;
+        margin-top: 10px;
+        margin-left: 0px;
+        padding: 30px;
+        padding-right: 6.9em ;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.9em;
+    }
+    .logout-btn:hover {
+        background-color: #FF3131;
+        color: white;
+    }
+
+
+
+
+    /*nav bar*/
+
+    :root{
+        --appbgmod:  #203447;
+        --appbg: #001f3f;
+        --white: #f9f9f9;
+        --black: #36383F;
+        --gray: #85888C;
+    } /* variables*/
+    
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    
+    /* styling header and logo*/
+    /* Header */
+    .header{
+        background-color: transparent;
+        /* box-shadow: 1px 1px 5px 0px red; */
+        position: sticky;
+        top: 0;
+        width: 30%;
+        left: 70%;
+        /* height: 70px; */
+    }
+    /* Logo */
+    /* .logo{
+        display: inline-block;
+        color: var(--white);
+        font-size: 60px;
+        margin-left: 10px;
+    } */
+    
+    /*styling nav menu*/
+    /* Nav menu */
+    .nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: var(--appbgmod);
+        overflow: hidden;
+        top: 2em;
+    }
+    .nav ul{
+        display: block;
+        /* padding: 30px;
+        color: #ffffff;
+        position: relative;
+        text-decoration: none; */
+    }
+    .menu a{
+        display: block;
+        padding: 25px;
+        color: #ffffff;
+        font-size: 0.9em;
+        /* position: relative; */
+        text-decoration: none;
+    }
+    /* highlight on press but link is not kept highlighted */
+    .menu a:active {
+        color: red;
+    }
+    /* keep highlight current link in nav */
+    .menu .active {
+        color: red;
+    }
+    .menu a:hover{
+        background-color: var(--gray);
+    }
+    .nav{
+        max-height: 0;
+        transition: max-height 0.1s ease-out;
+    }
+    
+    /*Styling the hamburger menu*/
+    /* Menu Icon (label) */
+    .hamb{
+        cursor: pointer;
+        float:right;
+        padding: 30px 10px;
+    }
+    /* Style label (span) tag */
+    .hamb-line {
+        background: var(--white);
+        display: block;
+        height: 5px;
+        position: relative;
+        width: 32px;
+    
+    } /* Style span tag */
+    .hamb-line::before,
+    .hamb-line::after{
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .hamb-line::before{
+        top: 10px;
+    }
+    .hamb-line::after{
+        top: -10px;
+    }
+    /*display property hide the checkbox*/
+    .side-menu {
+        display: none;
+    } /* Hide checkbox */
+    
+    /*styling the toggled menu icon*/
+    /* Toggle menu icon */
+    .side-menu:checked ~ nav{
+        max-height: 100%;
+    }
+    .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
+
+
+    #home-div {
+        background-color: transparent;
+        display: grid;
+    }
+
+
+    /* search box */
+    #searchbox-div {
+        /* border: 1px solid red; */
+        padding-top: 0em;
+        margin-top: 0em;
+        position: relative;
+        left: 0%;
+        width: 14vw;
+    }
+    .searchbar-div{
+        /* border: 1px solid red; */
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+      }
+      .input-search{
+        height: 30px;
+        width: 30px;
+        border-style: none;
+        padding: 10px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        outline: none;
+        border-radius: 25px;
+        transition: all .3s ease-in-out;
+        background-color: transparent;
+        padding-right: 40px;
+        color:#fff;
+      }
+      .input-search::placeholder{
+        color:rgba(255,255,255,.5);
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 50;
+      }
+      .btn-search{
+        width: 30px;
+        height: 30px;
+        border-style: none;
+        font-size: 23px;
+        /* font-weight: bold; */
+        /* outline: none; */
+        cursor: pointer;
+        /* border-radius: 20%; */
+        padding-right: 35px;
+        position: absolute;
+        right: 0px;
+        /* color:#ffffff ; */
+        background-color: #e7e7e7;
+        pointer-events: painted;
+      }
+      .btn-search:focus ~ .input-search{
+        width: 200px;
+        border-radius: 0px;
+        background-color: transparent;
+        border-bottom:1px solid rgba(255,255,255,.5);
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+      }
+      .input-search:focus{
+        width: 200px;
+        border-radius: 0px;
+        background-color: transparent;
+        border-bottom:1px solid rgba(255,255,255,.5);
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+      }
+    
+    /*  search bar status message AND search result list- */
+    #search-status-div {
+        border-left: 3px solid rgb(167, 6, 6);
+        background-color: lightgrey;
+        color: black;
+        width: 24vw;
+        margin-top: 3px;
+    }
+    #search-status-div:hover {
+        color: antiquewhite;
+        background-color: rgb(170, 31, 31);
+    }
+    
+    #search-list-div {
+        /* border: 2px solid #0475e6; */
+        border-left: 6px solid rgb(170, 31, 31);
+        background-color: lightgrey;
+        color: green;
+        width: fit-content;
+    }
+    #search-list-div p {
+        color: white;
+        /* background-color: #FF3131; */
+        width: fit-content;
+        padding: 5px 5px 0 15px;
+        text-decoration: none;
+    }
+    #search-list-div p:hover {
+        color: antiquewhite;
+        background-color: whitesmoke ;
+    }
+}
+
+
+
+
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+/* ***************************  E N D  ************************************ */
+
+/* references */
+/*
+
+source- reference hamburger menu
+https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/
+
+*/
+
+/*  
+responsive desgin source- 
+https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/
+
+grid vs flex source- 
+https://coder-coder.com/responsive-navigation-bar-flexbox-vs-css-grid/  
+We can import the font family into our style.scss by adding this line to 
+the very top:
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+Now in our styles for the <body> element, we can set font-family: 'Open Sans'
+,Arial, Helvetica, sans-serif to load Open Sans or a backup font
+
+.grid - class="grid
+#grid - id="grid"
+ul (tag) - all 'ul' tag
+nav.grid { .. } nav tag/element , .grid class
+*/
+
+/* for desktop or device which have min width of x or above,,
+        @media (min-width: 720px){
+             padding: 20px;
+             background-color: red
+         }
+  for MOB BELOW --->
+@media only screen and (max-width: 420px){
+    body {background-color: rgb(209, 77, 77);}
+
+     #navbar-ul {
+        grid-template-columns: repeat(5, 100px);
+    }
+}  */
