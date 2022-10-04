@@ -4,7 +4,7 @@ const userRouter = express.Router()
 // const passport = require('passport')
 const { subscribe } = require('../controllers/newsletterController')
 const { register, login, logout } = require('../controllers/userController')
-const { getQuote, postQuote, getuserQuote, deleteQuote } = require('../controllers/quoteController')
+const { getQuote, postQuote, getuserQuote, deleteQuote, ua } = require('../controllers/quoteController')
 const { search, getUserProfile } = require('../controllers/searchController')
 const utils = require('../lib/utils')
 
@@ -35,6 +35,8 @@ userRouter.route('/express').get((req, res) => {
 userRouter.route('/search/:id').get(search)
 
 userRouter.route('/user/:id').get(getUserProfile)
+
+userRouter.route('/test').get(ua)
 
 
 module.exports = userRouter

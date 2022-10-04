@@ -63,5 +63,20 @@ const deleteQuote = async (req, res) => {
     }
 }
 
+const ua = async (req, res) => {
+    try {
+        // console.log('testhead- ', req.headers)
+        const vis = await Visit.create({
+         useragent: req.headers['user-agent']
+        })
+        console.log('vis', vis)
+        if (vis) {
+            res.status(200).send('')
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-module.exports = { getQuote, postQuote, getuserQuote, deleteQuote }
+
+module.exports = { getQuote, postQuote, getuserQuote, deleteQuote, ua }
